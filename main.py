@@ -1,4 +1,5 @@
 from gauss_method import gauss_method
+from tridiagonal_mx_algorithm import tridiagonal_mx_algorithm
 
 
 def printm(a):
@@ -41,3 +42,7 @@ b__ = [38, -195, -27, 142]
 
 
 print(gauss_method(A, b))
+print()
+
+print(gauss_method(A_, b_))
+print(tridiagonal_mx_algorithm(A_, b_))
