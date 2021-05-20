@@ -1,4 +1,4 @@
-from gauss_method import gauss_method
+from gauss_method import gauss_method, gauss_method_linalg
 from tridiagonal_mx_algorithm import tridiagonal_mx_algorithm
 from seidel_method import seidel_method
 from jacobi_method import jacobi_method
@@ -38,12 +38,17 @@ b__ = [38, -195, -27, 142]
 eps = 0.01
 
 ###
-
+def printm(A):
+    for r in A:
+        print(r)
 
 print("gauss m-d")
 print(gauss_method(A, b))
-# print(f"gauss m-d determinant:  {gauss_method(A,b,return_determinant=True)}")
+print(f"gauss m-d determinant:  {gauss_method_linalg(A,return_determinant=True)}")
 print(f"numpy determinant:  {linalg.det(array(A))}")
+print()
+print("gauss m-d inverse matrix")
+printm(gauss_method_linalg(A,return_determinant=False))
 print()
 
 print("gauss m-d")

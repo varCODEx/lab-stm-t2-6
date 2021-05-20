@@ -46,10 +46,6 @@ def gauss_method(A, b):
 
     return backward_substitution(A_, b_)
 
-def printm(A):
-    for r in A:
-        print(r)
-
 def gauss_method_linalg(A, return_determinant=False):
     pivot_count = 0
     n = len(A)
@@ -92,12 +88,3 @@ def gauss_method_linalg(A, return_determinant=False):
         res[i] = backward_substitution(A_, np.transpose(B_).tolist()[i])
 
     return numpy.transpose(res).tolist()
-
-A = [[-1, -8, 0, 5],
-     [6, -6, 2, 4],
-     [9, -5, -6, 4],
-     [-5, 0, -9, 1, ]]
-
-print(gauss_method_linalg(A, True))
-printm(gauss_method_linalg(A, False))
-
