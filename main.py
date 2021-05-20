@@ -3,11 +3,6 @@ from tridiagonal_mx_algorithm import tridiagonal_mx_algorithm
 from seidel_method import seidel_method
 from jacobi_method import jacobi_method
 
-def printm(a):
-    for row in a:
-        print(row)
-    print()
-
 
 ### #12 - Override this
 
