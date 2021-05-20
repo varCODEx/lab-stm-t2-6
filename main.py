@@ -3,6 +3,8 @@ from tridiagonal_mx_algorithm import tridiagonal_mx_algorithm
 from seidel_method import seidel_method
 from jacobi_method import jacobi_method
 
+from numpy import linalg, array
+
 
 ### #12 - Override this
 
@@ -40,6 +42,8 @@ eps = 0.01
 
 print("gauss m-d")
 print(gauss_method(A, b))
+# print(f"gauss m-d determinant:  {gauss_method(A,b,return_determinant=True)}")
+print(f"numpy determinant:  {linalg.det(array(A))}")
 print()
 
 print("gauss m-d")
@@ -48,6 +52,8 @@ print("tridiagonal mx alg-m")
 print(tridiagonal_mx_algorithm(A_, b_))
 print()
 
+print("gauss m-d")
+print(gauss_method(A__, b__))
 print("jacobi m-d")
 print(jacobi_method(A__, b__, eps))
 print("seidel m-d")
